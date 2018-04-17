@@ -1,0 +1,22 @@
+
+   img {
+      max-width: 100%;
+   }
+
+
+   //*******************************************************
+   // lozad (lazy loaded elements)
+   //*******************************************************
+
+   [data-background-image] {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: $grey-light;
+      background-position: center center;
+   }
+
+   img.lozad {
+      background-color: $grey-light;
+      display: block;
+      height: auto;
+   }

@@ -1,0 +1,17 @@
+
+   @import '../_variables.scss';
+
+   @media (min-width: map-get($grid-breakpoints, lg)) {
+
+      .masonry {
+         column-count: 2;
+         column-gap: 1em;
+         margin: 0 auto;
+
+         .masonry-item {
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+         }
+      }
+   }

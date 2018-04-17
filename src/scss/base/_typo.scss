@@ -1,0 +1,197 @@
+
+   //*******************************************************
+   // globals
+   //*******************************************************
+
+      body {
+         font-family: 'Gothic A1', sans-serif;
+         font-size: 1rem;
+         line-height: 1.4em;
+         color: $black;
+      }
+
+      em, strong {
+         font-style: normal;
+      }
+
+
+   //*******************************************************
+   // Reset
+   //*******************************************************
+
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, ul, p {
+         margin-top:0;
+         margin-bottom: $space-typo;
+         padding: 0;
+         font-weight: 400;
+      }
+
+   //*******************************************************
+   // Sizes
+   //*******************************************************
+
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+         line-height: 1.2em;
+      }
+
+      .main {
+         font-size: 4vmin;
+         font-weight: 700
+      }
+
+      .secondary {
+         font-size: 3vmin;
+      }
+
+      .enhanced {
+         font-size: 2vmin;
+      }
+      //
+      // .category-title {
+      //    font-size: 36px;
+      //    margin-bottom: $space-big;
+      // }
+      //
+      // .article-headline {
+      //    font-size: 30px;
+      // }
+      //
+      // .section-headline {
+      //    font-size: 24px;
+      // }
+      //
+      // .sub-section-headline {
+      //    font-size: 20px;
+      // }
+      //
+      // .text-standard {
+      //    font-size: 18px;
+      // }
+      //
+      // .text-small {
+      //    font-size: 14px;
+      //    line-height: 1.4em;
+      // }
+
+   //*******************************************************
+   // for wysiwyg
+   //*******************************************************
+
+      .wysiwyg {
+
+      }
+
+
+
+   //*******************************************************
+   // colors
+   //*******************************************************
+
+
+
+   //*******************************************************
+   // Lists
+   //*******************************************************
+
+      .list-inline {
+         li {
+            display: inline-block;
+            list-style-type: none;
+            margin-right: 5px;
+
+            &.last-child {
+               margin:0;
+            }
+         }
+      }
+
+
+
+
+   //*******************************************************
+   // Dashes
+   //*******************************************************
+
+      .dash {
+
+         padding-top: 15px;
+         position: relative;
+
+         &:before {
+            content: '';
+            display:block;
+            top:0;
+            left:0;
+            width:22px;
+            height:5px;
+            background-color: $black;
+            position: absolute;
+         }
+
+         &.dash-bottom {
+
+            padding-top: 0;
+            padding-bottom: 15px;
+
+            &:before {
+               top:inherit;
+               bottom:0;
+            }
+         }
+
+         @media (min-width: map-get($grid-breakpoints, xl)) {
+            padding-top: 20px;
+
+            &:before {
+               height: 7px;
+            }
+
+            &.dash-bottom {
+               padding-bottom: 20px;
+            }
+         }
+
+         &.dash-mini {
+            &.dash-bottom {
+               padding-bottom: 0;
+
+               &:before {
+                  height: 3px;
+                  width: 15px;
+                  left:inherit;
+                  right: 0;
+               }
+            }
+         }
+      }
+
+   //*******************************************************
+   // links
+   //*******************************************************
+
+      a {
+         text-decoration: underline;
+         color: $cta;
+      }
+
+      .link {
+         text-decoration: underline;
+      }
+
+   //*******************************************************
+   // styles
+   //*******************************************************
+
+      .text-italic,
+      em {
+         font-family:"Mark W01 Book Italic";
+      }
+
+      .text-normal {
+         font-family:"Mark W01 Book";
+      }
+
+      strong,
+      .text-bold {
+         font-family: 'Mark W01 Bold';
+      }
