@@ -66,7 +66,7 @@
             //html
             new HtmlWebpackPlugin({
                title: 'Scrapp - webpack boilerplate',
-               template: 'src/templates/index.html'
+               template: 'src/templates/app.html'
             })
             // new HtmlWebpackPlugin({  // Also generate a test.html
             //    title: 'contact.html'.
