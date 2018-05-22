@@ -71,7 +71,7 @@
             //html
             new HtmlWebpackPlugin({
                title: 'Scrapp - webpack boilerplate',
-               template: 'src/templates/app.html'
+               template: 'ejs-render-loader!./src/templates/index.ejs',
             })
             // new HtmlWebpackPlugin({  // Also generate a test.html
             //    title: 'contact.html'.
