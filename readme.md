@@ -1,13 +1,13 @@
 
    # SCRAPP - A WEBPACK BOILERPLATE
-   ## This is a basic webpack setup to start developing with
+   ## A good starting point to develop with webpack.
+   Configuration of the webpack can be very complicated and time consuming. Simply scip this part and start developing with this little framework.
 
    ### WEBPACK features
-   - HTML Webpack plugin (auto-creation of the index.html)
-   - HTML TEMPLATE
-   - FILE LOADER (the css and js will be automaticaly appended to the document)
-   - WEBPACK DEV SERVER
-   - Lazy Loading
+   - HTML Templates
+   - File Loaders
+   - Autoprefixer
+   - Webpack dev server
 
    ### FRAMEWORK features
    - lazy loading images with LOZAD
