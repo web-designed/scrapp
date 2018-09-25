@@ -8,6 +8,7 @@
    - File Loaders
    - Autoprefixer
    - Webpack dev server
+   - Common chunks plugin
 
 
    ### FRAMEWORK features

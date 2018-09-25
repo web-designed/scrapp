@@ -1,7 +1,7 @@
 
-   const path = require('path');
-   const ExtractTextPlugin = require('extract-text-webpack-plugin');
-   const webpack = require('webpack');
+   const path = require('path')
+   const ExtractTextPlugin = require('extract-text-webpack-plugin')
+   const webpack = require('webpack')
    const HtmlWebpackPlugin = require('html-webpack-plugin')
    // const ModernizrWebpackPlugin = require('modernizr-webpack-plugin');
 
@@ -16,7 +16,8 @@
 
       return {
          entry    : {
-            app: './src/js/app.js'
+            app: './src/js/app.js',
+            contact: './src/js/contact.js'
          },
          output   : {
             filename : '[name].bundle.js',
@@ -66,18 +67,33 @@
          },
          plugins: [
 
+            // optimize the performance with the commons chunks plugin
+            new webpack.optimize.CommonsChunkPlugin({
+               name: 'common'
+            }),
+
             CSSExtract,
 
             //html
             new HtmlWebpackPlugin({
                title: 'Scrapp - webpack boilerplate',
                template: 'ejs-render-loader!./src/templates/index.ejs',
+               chunks: ['app', 'common']
+            }),
+
+            new HtmlWebpackPlugin({
+               title: 'contact.html',
+               filename: 'contact.html',
+               template: 'ejs-render-loader!./src/templates/contact.ejs',
+               chunks: ['contact', 'common']
+            }),
+
+            new HtmlWebpackPlugin({
+               title: 'about.html',
+               filename: 'about.html',
+               template: 'ejs-render-loader!./src/templates/about.ejs',
+               chunks: ['about', 'common']
             })
-            // new HtmlWebpackPlugin({  // Also generate a test.html
-            //    title: 'contact.html'.
-            //    filename: 'contact.html',
-            //    template: 'src/templates/contact.html'
-            // })
 
             // modernizr
             // new ModernizrWebpackPlugin({
